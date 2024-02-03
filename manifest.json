@@ -1,0 +1,24 @@
+{
+    "name": "Impact Extension",
+    "manifest_version": 3,
+    "permissions": ["scripting", "activeTab","tabs", "http*://*.codeninjas.com/*"],
+    "version": "1.0.0",
+    
+    "content_scripts": [
+        {
+        
+            "js": ["jquery.min.js", "main.js"],
+            "matches": [
+                "https://arcade.makecode.com/*",
+                "https://impact.codeninjas.com/level/*"
+            ]
+
+        },
+        {
+            "matches": ["https://impact.codeninjas.com/level/*"],
+            "js": ["jquery.min.js", "main.js"]
+        }
+    ]
+
+    
+  }
